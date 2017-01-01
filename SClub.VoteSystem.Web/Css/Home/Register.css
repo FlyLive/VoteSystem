@@ -1,0 +1,58 @@
+﻿body {
+    padding:0;
+    margin:0;
+}
+.registerAll{
+    background-color:lightsteelblue;
+    width:500px;
+}
+.title{
+    border-left:3px solid #0094ff;
+    border-bottom:1px solid #616161;
+    font-family: "微软雅黑";
+    margin-left:5px;
+    text-indent: 6px;
+    font-size: 18px;
+    color: #616161;
+    height: 30px;
+}
+.input,.registerReset{
+    width:370px;
+    text-align:right;
+}
+.gender,.submit{
+    text-align:center;
+    margin-bottom:0px;
+}
+.input input{
+    background-color:paleturquoise;
+    border-radius:5px;
+    border:1px solid #616161;
+    height:30px;
+    font-size:20px;
+}
+form div{
+    font-family:"宋体";
+    margin :20px;
+}
+.registerReset button{
+
+    font-size:20px;
+}
+.registerReset button:hover {
+    background-color:cornflowerblue;
+}
+.submit button{
+    width:300px;
+    height:70px;
+    font-size:30px;
+    margin-bottom:20px;
+}
+.submit button:hover{
+     background-color:cornflowerblue;
+}
+button{
+    border:1px solid #0094ff;
+    background-color:springgreen;
+    text-decoration: none;
+}

@@ -1,0 +1,32 @@
+﻿@model SClub.VoteSystem.LogicDemo.DataBase.VoteProject
+
+<link rel="stylesheet" href="~/Css/Project/S_Web.css"/>
+<title>@Model.Name</title>
+<div class="intro animated flipInY">
+    <h1>
+        赛车详情：
+    </h1>
+    <div class="Intro">
+        <p>
+            车名：@Model.Name
+        </p>
+        <p>
+            赛车类型：S级
+        </p>
+        <p>
+            赛车简介：@Model.Message
+        </p>
+        <p>
+            赛车测评：@Model.Intro
+        </p>
+    </div>
+</div>
+<div class="image">
+    <img class="no1" src="@Model.Image_F" />
+</div>
+<a class="movie" href="@Model.Movie" target="_blank">
+    <img src="~/Image/Project/movie_bg.png" onMouseover="this.width=300; this.height=157" onMouseout="this.width=200; this.height=107" />
+</a>
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="~/JS/Project/Project.js"></script>

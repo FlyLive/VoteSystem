@@ -1,0 +1,32 @@
+﻿body {
+    margin:0;
+    padding:0;
+    background-image: url('../../Image/Project/S_Car_bg.jpg');
+    background-repeat:no-repeat;
+    height:1050px;
+    width:100%;
+}
+.intro{
+    width:400px;
+    position:absolute;
+    left:1350px;
+}
+.image{
+    position:absolute ;
+    top:750px;
+    left:900px;
+}
+.image img{
+    width:300px;
+    height:200px;
+    bottom:0;
+}
+.movie{
+    position:absolute ;
+    top:850px;
+    left:140px;
+}
+.Intro{
+    font-size:30px;
+    margin-left:40px;
+}

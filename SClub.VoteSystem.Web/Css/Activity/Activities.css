@@ -1,0 +1,275 @@
+﻿body {
+    margin:0;
+    padding:0;
+    background-color:#000e28;
+}
+.wrap{
+    background:url("../../Image/Activity/wrap_bg.jpg") no-repeat scroll center top;
+    background-color:#000e28;
+    width:100%;
+    min-width:1000px;
+}
+.author{
+    position:fixed;
+    float:left;
+    top:60%;
+    left:80px;
+}
+.head,.sign,.vote{
+    width: 1000px;
+    margin: 0 auto;
+}
+.head{
+    position:relative;
+    background-image:url("../../Image/Activity/head.png");
+    background-repeat: no-repeat;
+    height:280px;
+    width:1000px;
+}
+.head-bg{
+    height:280px;
+    width:1000px;
+    right:200px;
+    background-repeat:no-repeat;
+}
+p{
+    margin:0;
+}
+.tip{
+    position: relative;
+    text-align: center;
+    color: aqua;
+}
+#loginInTip{
+    float: left;
+}
+.loginOutTip{
+    top: 75px;
+    left: 740px;
+    width: 180px;
+    position: relative;
+    text-align: center;
+    color:aqua;
+}
+.login{
+    position: relative;
+    text-align: center;
+    color:aqua;
+}
+.loginIn{
+    float: left;
+}
+#loginIn{
+    top: 75px;
+    left: 750px;
+    width: 200px;
+    position: relative;
+    display:none;
+}
+.sign{
+    background-image:url("../../Image/Activity/wrap_bg.png");
+    background-repeat: no-repeat;
+    height:280px;
+}
+.activity-intro{
+    width:440px;
+    position:relative;
+    text-align:center;
+    color:#ff7372;
+    font-size:50px;
+    font-weight:900;
+    top:100px;
+    left:260px;
+}
+#sign{
+    position:relative;
+    text-align:center;
+    font-weight:600;
+    width:295px;
+    top:150px;
+    left:324px;
+}
+.vote{
+    background-image:url("../../Image/Activity/vote_bg.jpg");
+    background-repeat: repeat;
+    border-bottom: #19305e solid 1px;/*划线*/
+    border-top: #19305e solid 1px;/*划线*/
+    border-left: #19305e solid 1px;/*划线*/
+    border-right: #19305e solid 1px;/*划线*/
+}
+.voteActivity{
+    display:inline-block;
+}
+.vote ul{
+    margin:auto auto;
+    width:1000px;
+    height: 136px;
+    padding-left:0px;
+    list-style:none;
+}
+.vote li{
+    width: 500px;
+    height: 68px;
+    float: left;
+}
+.vote li .button{
+    position:absolute;
+    font-size: 40px;
+    width: 500px;
+    height: 68px;
+    text-align: center;
+    line-height: 68px;
+    color: #70c5f5;
+    text-decoration: none;
+    background-image:url("../../Image/Activity/待定_b.png");
+}
+.time p{
+    margin:5px 40px;
+    font-size:30px;
+    color:mediumvioletred;
+}
+#project2 li{
+    margin-left:100px;
+}
+#project3 li{
+    margin-left:;
+}
+#project3 .votePlace {
+    height:860px;
+}
+.checkPlace{
+    height:50px;
+}
+.vote li .button:hover {
+    color:coral;
+    background-image: url('../../Image/Activity/待定_t.png');
+}
+.NO{
+    font-size:40px;
+    color:#2b8fdf;
+    margin-left:20px;
+    margin-right:20px;
+    border-bottom: #19305e solid 1px;/*划线*/
+}
+.votePlace,.votePlace ul{
+    height:430px;
+}
+.votePlace li{
+    border-bottom: #19305e solid 1px;/*划线*/
+    border-top: #19305e solid 1px;
+    border-left: #19305e solid 1px;
+    border-right: #19305e solid 1px;
+    margin-left:200px;
+    margin-bottom:30px;
+    float:left;
+    height:400px;
+    width:200px;
+}
+.message{
+    height:150px;
+    background-color:#000e28;
+}
+.project-title,.vote-num{
+    padding-left:10px;
+    padding-top:10px;
+    font-size:25px;
+    color:#70c5f5;
+}
+.logo{
+    height:248px;
+    width:198px;
+    background-color:black;
+}
+.vote-b{
+    width:150px;
+    text-align:center;
+    font-size:25px;
+    background-color:#de5238;
+    border-color:#315566;
+    border-radius:10px;
+    left:25px;
+    top:10px;
+}
+.vote-b:hover{
+    background-color:#277e87;
+}
+.foot{
+    margin:20px auto;
+    width:1100px;
+    border-top: #19305e solid 2px;
+    text-align:center;
+    color:#70c5f5;
+    font-size:20px;
+}
+.foot-1{
+    font-size:25px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.two p {
+    margin:10px 0;
+}
+.two{
+    height:350px;
+    width:250px;
+    display:none;
+    float:right;
+    color:#d11919;
+    background-color:white;
+    font-size:20px;
+    font-weight:600;
+    text-align:center;
+}
+.recordCheck{
+    margin-right: 100px;
+    float:right;
+}
+.voteRankCheck{
+    margin-left: 100px;
+    float:left;
+}
+.recordCheck,.voteRankCheck{
+    border-radius:10px;
+    border:0;
+    height: 50px;
+    width: 300px;
+    font-size: 30px;
+    background-color:#0770c7;
+}
+.recordCheck:hover,.voteRankCheck:hover{
+    background-color:#cf4517;
+}
+.film{
+    z-index:10001;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: none;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+}
+#recordIframe {
+    width: 100%;
+    top: 30%;
+    z-index: 10002;
+    position: fixed;
+    display: none;
+}
+#recordIframe .record{
+    margin: 0 auto;
+    width: 1200px;
+    background: url('../../Image/Activity/vote_bg.jpg');
+}
+#recordIframe .recordIframe {
+    margin: 0 auto;
+}
+.close{
+    top: -5px;
+    font-size: 40px;
+    color:gainsboro;
+}
+.close:hover{
+    color:red;
+}

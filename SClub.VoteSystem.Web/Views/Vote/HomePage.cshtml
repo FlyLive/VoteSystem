@@ -1,0 +1,211 @@
+﻿@model IEnumerable<SClub.VoteSystem.LogicDemo.DataBase.VoteActivity>
+@section Styles{
+    <link rel="stylesheet" href="~/Css/Home/Home.css" />
+    <link rel="stylesheet" href="~/Css/Home/Login.css" />
+    <link rel="stylesheet" href="~/Css/Home/Register.css" />
+    <link rel="stylesheet" type="text/css" href="~/Css/Home/custom.css" />
+    <link rel="stylesheet" type="text/css" href="~/Css/Home/slicebox.css" />
+}
+<title>Home</title>
+<body onload="StartTime()">
+    <div class="all">
+        <div class="message">
+            静守时光，以待流年
+            <div class="login">
+                <a id="login">登录</a>
+                <span>/</span>
+                <a id="register">注册</a>
+            </div>
+        </div>
+        <div id="time"></div>
+        <div class="wrapper animated zoomIn">
+            <ul id="sb-slider" class="sb-slider">
+                @{
+                    var i = 0;
+                    foreach (var activity in Model)
+                    {
+                        i++;
+                        foreach (var project in activity.VoteProject)
+                        {
+                            if (i <= 2)
+                            {
+                                <li>
+                                    <a href="/Vote/Project@(i)Details/@project.Id" target="_blank"><img src="@project.Logo" /></a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li>
+                                    <a href="/Vote/ProjectGeneralDetails/@project.Id" target="_blank"><img src="@project.Logo" /></a>
+                                </li>
+                            }
+                        }
+                    }
+                }
+            </ul>
+            <div class="control">
+                <div id="nav-arrows" class="nav-arrows">
+                    <a href="#" class="right"></a>
+                    <a href="#" class="left"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="loginIframe">
+        <div class="loginAll">
+            <form action="/User/Login" method="post" class="Login">
+                <input name="id" class="loginName" type="text" placeholder="请输入账户" />
+                <input name="password" class="key" type="password" placeholder="请输入密码" />
+                <button class="L_B" type="submit">
+                    登录
+                </button>
+                <button class="loginReset" type="reset">
+                    重置
+                </button>
+            </form>
+        </div>
+        <span id="loginClose">×</span>
+    </div>
+    <div id="registerIframe">
+        <div class="registerAll registerIframe">
+            <div class="title">
+                注册账号
+            </div>
+            <div>
+                <form action="/User/Register" method="post">
+                    <div class="input">
+                        <label class="registerName" for="nameId">用户名</label>
+                        <input name="name" id="nameId" type="text" />
+                    </div>
+                    <div class="input">
+                        <label class="fPassword" for="fPasswordId">密码</label>
+                        <input name="fPassword" id="fPasswordId" type="password" />
+                    </div>
+                    <div class="input">
+                        <label class="sPassword" for="sPasswordId">确认密码</label>
+                        <input name="sPassword" id="sPasswordId" type="password" />
+                    </div>
+                    <div class="gender">
+                        <span>性别</span>
+                        <label>
+                            <input name="gender" type="radio" value="男">
+                            <span>男</span>
+                        </label>
+                        <label>
+                            <input name="gender" type="radio" value="女">
+                            <span>女</span>
+                        </label>
+                    </div>
+                    <div class="registerReset">
+                        <button type="reset">重置</button>
+                    </div>
+                    <div class="submit">
+                        <button type="submit">立即注册</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <span id="registerClose">×</span>
+    </div>
+    <div class="film"></div>
+    <link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script src="~/JS/Home/Home.js"></script>
+    <script type="text/javascript" src="~/JS/Home/slicebox.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var Page = (function () {
+                var $navArrows = $('#nav-arrows').hide(),
+                    $shadow = $('#shadow').hide(),
+                    slicebox = $('#sb-slider').slicebox({
+                        onReady: function () {
+                            $navArrows.show();
+                            $shadow.show();
+                        },
+                        orientation: 'r',
+                        cuboidsRandom: true,
+                        disperseFactor: 30
+                    }),
+                    init = function () {
+                        initEvents();
+                    },
+                    initEvents = function () {
+                        // add navigation events
+                        $navArrows.children(':first').on('click', function () {
+                            slicebox.next();
+                            return false;
+                        });
+                        $navArrows.children(':last').on('click', function () {
+                            slicebox.previous();
+                            return false;
+                        });
+                    };
+                return { init: init };
+            })();
+            Page.init();
+        });
+    </script>
+    @{
+        //提示登录失败
+        if (TempData["loginError"] != null)
+        {
+            if (TempData["loginError"].Equals("inputError"))
+            {
+                <script>
+                    $(".film").show();
+                    alert("格式错误,请重试！");
+                    $(".film").hide();
+                </script>
+            }
+            else if (TempData["loginError"].Equals("Error"))
+            {
+                <script>
+                    $(".film").show();
+                    alert("账户不存在或密码错误,请重试！");
+                    $(".film").hide();
+                </script>
+            }
+            TempData["loginError"] = null;
+        }
+        //提示注册结果
+        if (TempData["registerResult"] != null)
+        {
+            if (TempData["registerResult"].Equals("inputError"))
+            {
+                <script>
+                    $(".film").show();
+                    alert("信息不全,请重新注册！");
+                    $(".film").hide();
+                </script>
+            }
+            else if (TempData["registerResult"].Equals("passwordError"))
+            {
+                <script>
+                    $(".film").show();
+                    alert("两次输入密码不一致,请重新注册!");
+                    $(".film").hide();
+                </script>
+            }
+            else if (TempData["registerResult"].Equals("reName"))
+            {
+                <script>
+                    $(".film").show();
+                    alert("用户名已存在,请重新注册!");
+                    $(".film").hide();
+                </script>
+            }
+            else if (TempData["registerResult"].Equals("success"))
+            {
+                <script>
+                    $(".film").show();
+                alert("注册成功,请记住您的账号---@TempData["Id"]---以便下次登录!");
+                alert("温馨提示,请务必请记住您的账号---@TempData["Id"]---以便下次登录!");
+                alert("最后一次提醒,请务必请记住您的账号---@TempData["Id"]---以便下次登录!");
+                    $(".film").hide();
+                </script>
+                TempData["Id"] = null;
+            }
+            TempData["registerResult"] = null;
+        }
+    }
+</body>

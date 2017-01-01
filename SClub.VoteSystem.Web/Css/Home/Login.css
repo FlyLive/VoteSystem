@@ -1,0 +1,52 @@
+﻿body {
+    padding:0;
+    margin:0;
+}
+.loginAll{
+    width:285px;
+}
+.Login{
+    height:340px;
+    width:285px;
+    background:url('../../Image/Login/Login.png');
+    top:30%;
+    left:42%;
+}
+.Login input{
+    position:relative;
+    background-color:#3684aa;
+    border:none;
+    border-radius:10px;
+    font-size:30px;
+    height:38px;
+    width:170px;
+    left:77px;
+}
+.loginName{
+    top:96px;
+}
+.key{
+    top:125px;
+}
+.L_B{
+    position:relative;
+    background-color:#cc4417;
+    border:2px solid #315566;
+    border-radius:10px;
+    font-size:30px;
+    height:40px;
+    width:210px;
+    top:140px;
+    left:39px;
+}
+.loginReset{
+    top:160px;
+    left:170px;
+    position:relative;
+    background-color:#4756e5;
+    border:2px solid #315566;
+    border-radius:10px;
+    font-size:15px;
+    text-align:center;
+    width:80px;
+}

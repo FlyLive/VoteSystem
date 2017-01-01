@@ -1,0 +1,54 @@
+﻿@model IEnumerable<SClub.VoteSystem.LogicDemo.DataBase.VoteRecord>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VoteRecordByActivityId</title>
+    <link href="~/Css/Activity/VoteRecordByActivityId.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="recordAll">
+        <div class="recordHead">
+            <div class="recordTitle">
+                投票记录
+            </div>
+        </div>
+        <hr />
+        <div class="">
+            <table class="recordMessage">
+                <thead>
+                    <tr>
+                        <th>活动</th>
+                        <th>项目</th>
+                        <th>投票人</th>
+                        <th>投票时间</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Count() != 0)
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.ActivityName</td>
+                                <td>@item.ProjectName</td>
+                                <td>@item.UserName</td>
+                                <td>@item.VoteTime</td>
+                            </tr>
+                        }
+                    }
+                    else if(Model.Count()==0)
+                    {
+                        <tr>
+                            <td colspan="4">暂时没有投票记录,赶紧为您心仪的项目投上一票吧！</td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

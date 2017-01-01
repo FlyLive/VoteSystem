@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VoteSystemWebDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Gender" Type="bit" />
+  </EntityType>
+  <EntityType Name="VoteActivity">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Intor" Type="ntext" />
+    <Property Name="BeginTime" Type="datetime" Nullable="false" />
+    <Property Name="EndTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="VoteProject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActivityId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Intro" Type="ntext" />
+    <Property Name="VoteCount" Type="int" />
+    <Property Name="Logo" Type="ntext" />
+    <Property Name="Movie" Type="ntext" />
+    <Property Name="Image_F" Type="ntext" />
+    <Property Name="Image_S" Type="ntext" />
+    <Property Name="Message" Type="ntext" />
+  </EntityType>
+  <EntityType Name="VoteRecord">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="ActivityId" Type="int" Nullable="false" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ActivityName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProjectName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="VoteTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_VoteProject_VoteActivity">
+    <End Role="VoteActivity" Type="Self.VoteActivity" Multiplicity="1" />
+    <End Role="VoteProject" Type="Self.VoteProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VoteActivity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="VoteProject">
+        <PropertyRef Name="ActivityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VoteSystemWebDBModelStoreContainer">
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VoteActivity" EntityType="Self.VoteActivity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VoteProject" EntityType="Self.VoteProject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VoteRecord" EntityType="Self.VoteRecord" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_VoteProject_VoteActivity" Association="Self.FK_VoteProject_VoteActivity">
+      <End Role="VoteActivity" EntitySet="VoteActivity" />
+      <End Role="VoteProject" EntitySet="VoteProject" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

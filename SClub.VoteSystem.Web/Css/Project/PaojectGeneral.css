@@ -1,0 +1,60 @@
+﻿body {
+    padding:0;
+    margin:0;
+}
+h2{
+    text-indent:40px;
+    border-left:15px solid #0026ff;
+    border-bottom:1px solid #0026ff;
+    font-weight:600;
+}
+h3{
+    font-weight:600;
+}
+p{
+    font-size:20px;
+    text-indent:40px;
+}
+.projectIntro p {
+    margin-left: 40px;
+}
+.secondBox{
+    width:1100px;
+    margin:0 auto;
+}
+.image{
+    height:250px;
+    width:250px;
+}
+.movie div{
+    margin:0 auto;
+}
+.movie div ,.movie .video{
+    width:1000px;
+    height:540px
+}
+.evaluate div{
+    width: 1000px;
+    margin: 0 auto;
+}
+.evaluate ul{
+    padding-left:0;
+    border:1px solid;
+}
+.evaluate ul li{
+    border-bottom:1px solid #a19898;
+    list-style:none;
+}
+.foot{
+    position:relative;
+    margin:20px auto;
+    width:1100px;
+    border-top: #000000 solid 2px;
+    text-align:center;
+    font-size:20px;
+}
+.foot-1{
+    font-size:25px;
+    margin-top:10px;
+    margin-bottom:10px;
+}

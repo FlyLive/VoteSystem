@@ -1,0 +1,39 @@
+﻿body {
+    background-image: url('../../Image/Activity/vote_bg.jpg');
+    padding:0;
+    margin:0;
+}
+.recordAll {
+    padding-bottom:3px;
+}
+.recordTitle{
+    border-left:3px solid #0094ff;
+    border-bottom:1px solid #19305e;
+    font-family: "微软雅黑";
+    margin-left:5px;
+    text-indent: 6px;
+    font-size: 18px;
+    color: #27a4f6;
+    height: 30px;
+}
+.recordAll hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+}
+.recordMessage,.recordTitle{
+    margin:0 auto;
+}
+.recordMessage th,.recordMessage td{
+    text-align:center;
+    font-size: 30px;
+    border-left: 3px solid #19305e;
+    border-right: 3px solid #19305e;
+    border-top: 3px solid #19305e;
+    border-bottom: 3px solid #19305e;
+    color: #27a4f6;
+}
+.recordMessage td{
+    text-align:left;
+    color:#fd5852;
+}

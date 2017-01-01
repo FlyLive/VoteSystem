@@ -1,0 +1,74 @@
+﻿body {
+    margin:0;
+    padding:0;
+    background-image: url("../../Image/Project/T_Car_bg.jpg");
+    background-repeat:no-repeat;
+    height:1050px;
+    width:100%;
+    min-width:1000px;
+}
+.intro {
+    width: 400px;
+}
+.button{
+    position:absolute ;
+    top: 700px;
+    left: 320px;
+    width: 640px;
+    height: 325px;
+}
+.left,.right{
+    position:absolute;
+    height:100px;
+    width:100px;
+    text-decoration: none;
+}
+.left {
+    background-image: url("../../Image/Project/Left_b.png");
+    background-size:100px 100px;
+}
+.left:hover {
+    background-image: url('../../Image/Project/Left_t.png');
+    background-size:100px 100px;
+}
+.right {
+    background-image: url('../../Image/Project/Right_b.png');
+    left: 540px;
+}
+.right:hover {
+    background-image: url('../../Image/Project/Right_t.png');
+}
+.movie {
+    position: absolute;
+    top: 125px;
+    left: 220px;
+    height: 100px;
+    width: 200px;
+    text-decoration: none;
+    background-image: url('../../Image/Project/movie_bg.png');
+    background-size: 200px 100px;
+}
+.Intro{
+    font-size:30px;
+    margin-left:40px;
+}
+.image{
+    position:absolute ;
+    overflow:hidden;
+    width:620px;
+    top:50px;
+    left:350px;
+}
+.image div{
+    width:1240px;
+    height:700px;
+}
+.no1{
+    width:620px;
+    height:700px;
+}
+.no2{
+    margin-top:350px;
+    margin-left:50px;
+    height: 250px;
+}

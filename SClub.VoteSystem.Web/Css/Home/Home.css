@@ -1,0 +1,109 @@
+﻿body {
+    margin:0;
+    padding:0;
+}
+.all {
+    transition:all 2s;
+    background:url("../../Image/Home/Home_bg.jpg") no-repeat scroll center top;
+    margin-left:auto;
+    margin-right:auto;
+    height:970px;
+    width:100%;
+}
+.message{
+    text-align: center;
+    font-size: 100px;
+    color:#61ddeb;
+    position: relative;
+    margin: 0 auto;
+    width: 1000px;
+    top:100px;
+}
+.message a{
+    cursor:pointer;
+}
+.login,.login a:link{
+    text-align: center;
+    font-size: 30px;
+    color: blue;
+    margin: 50px auto;
+    width: 300px;
+}
+.login a:hover{
+    color:dodgerblue;
+}
+.login a:visited{
+    color:crimson;
+}
+#time{
+    position: relative;
+    font-size: 60px;
+    color: #45c2b8;
+    width: 255px;
+    margin: 0 auto;
+    top: 600px;
+    font-weight: 500;
+}
+#loginIframe,#registerIframe{
+    z-index:10002;
+    border:none;
+    position: fixed;
+    top:400px;
+    left: 47%;
+    display:none;
+    margin: -100px 0px 0px -100px;
+}
+#registerIframe {
+    left: 40%;
+}
+.loginIframe{
+    height: 345px;
+    width: 290px;
+}
+.registerIframe{
+    width: 504px;
+    height: 396px;
+}
+#loginClose,#registerClose{
+    position: relative;
+    font-size: 40px;
+    line-height: 30px;
+    color: gainsboro;
+    float: right;
+    right: 5px;
+    top: -395px;
+}
+#loginClose{
+    top: -330px;
+    font-size: 60px;
+}
+#loginClose,#registerClose{
+    cursor:pointer;
+}
+#loginClose:hover,#registerClose:hover{
+    color:red;
+}
+.film{
+    z-index:10001;
+    background-color: white;
+    position: absolute;
+    display:none;
+    opacity: 0.7;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+@-webkit-keyframes redToYellow{
+    from{
+        color:#61ddeb;
+    }
+    to{
+        color:wheat;
+    }
+}
+.message{
+    animation:redToYellow 3s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+}

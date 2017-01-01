@@ -1,0 +1,32 @@
+﻿.nav-arrows {
+    display: none;
+    margin: 0 auto;
+    height: 100px;
+    width: 640px;
+}
+.control{
+    position: relative;
+    height: 100px;
+    top: -300px;
+}
+    .nav-arrows a {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        border-radius: 50%;
+    }
+
+.nav-arrows .left {
+    background-image: url('../../Image/Project/Left_b.png');
+    left:auto;
+}
+.nav-arrows .right {
+        background-image: url('../../Image/Project/Right_b.png');
+        margin-left:530px;
+    }
+.nav-arrows .left:hover {
+    background-image: url('../../Image/Project/Left_t.png');
+}
+.nav-arrows .right:hover {
+    background-image: url('../../Image/Project/Right_t.png');
+}

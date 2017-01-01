@@ -1,0 +1,12 @@
+C:\Users\LL\documents\visual studio 2015\Projects\SClub.VoteSystem.Web\SClub.VoteSystem.LogicDemo\bin\Debug\SClub.VoteSystem.LogicDemo.dll.config
+C:\Users\LL\documents\visual studio 2015\Projects\SClub.VoteSystem.Web\SClub.VoteSystem.LogicDemo\bin\Debug\SClub.VoteSystem.LogicDemo.dll
+C:\Users\LL\documents\visual studio 2015\Projects\SClub.VoteSystem.Web\SClub.VoteSystem.LogicDemo\bin\Debug\SClub.VoteSystem.LogicDemo.pdb
+C:\Users\LL\documents\visual studio 2015\Projects\SClub.VoteSystem.Web\SClub.VoteSystem.LogicDemo\obj\Debug\SClub.VoteSystem.LogicDemo.csprojResolveAssemblyReference.cache
+C:\Users\LL\documents\visual studio 2015\Projects\SClub.VoteSystem.Web\SClub.VoteSystem.LogicDemo\obj\Debug\SClub.VoteSystem.LogicDemo.dll
+C:\Users\LL\documents\visual studio 2015\Projects\SClub.VoteSystem.Web\SClub.VoteSystem.LogicDemo\obj\Debug\SClub.VoteSystem.LogicDemo.pdb
+C:\Users\LL\Documents\Visual Studio 2015\Projects\SClub.VoteSystem.Web\SClub.VoteSystem.LogicDemo\bin\Debug\EntityFramework.dll
+C:\Users\LL\Documents\Visual Studio 2015\Projects\SClub.VoteSystem.Web\SClub.VoteSystem.LogicDemo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\LL\Documents\Visual Studio 2015\Projects\SClub.VoteSystem.Web\SClub.VoteSystem.LogicDemo\bin\Debug\EntityFramework.xml
+C:\Users\LL\Documents\Visual Studio 2015\Projects\SClub.VoteSystem.Web\SClub.VoteSystem.LogicDemo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\LL\Documents\Visual Studio 2015\Projects\SClub.VoteSystem.Web\SClub.VoteSystem.LogicDemo\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\LL\Documents\Visual Studio 2015\Projects\SClub.VoteSystem.Web\SClub.VoteSystem.LogicDemo\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
